@@ -9,7 +9,8 @@ A simple GraphQL API built on Spring with graphql-java-tools and JPA.
   - `items`
 - Mutation:
   - `createItem(content: {itemContent})`
-  - `deleteItem(id: {id}, content: {newItemContent})`
+  - `deleteItem(id: {id}`
+  - `updateItem(id: {id}, content: {newItemContent})`
 
 ```
 type Item {
