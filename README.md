@@ -9,6 +9,7 @@ A simple GraphQL API built on Spring with graphql-java-tools and JPA.
   - `items`
 - Mutation:
   - `createItem(content: {itemContent})`
+  - `deleteItem(id: {id}, content: {newItemContent})`
 
 ```
 type Item {
@@ -23,6 +24,8 @@ type Query {
 
 type Mutation {
     createItem(content: String!): Item
+    deleteItem(id: ID): Boolean
+    updateItem(id: ID, content: String): Item
 }
 ```
 
