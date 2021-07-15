@@ -44,3 +44,7 @@ spring.jpa.hibernate.ddl-auto=update
 ```
 
 Now the data being written should stay persistent 
+
+## License
+
+`MIT License`
