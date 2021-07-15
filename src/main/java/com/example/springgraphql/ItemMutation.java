@@ -13,4 +13,12 @@ public class ItemMutation implements GraphQLMutationResolver {
     public Item createItem(final String content) {
         return this.itemService.createItem(content);
     }
+
+    public void deleteItem(final int id) {
+        this.itemService.deleteItem(id);
+    }
+
+    public Item updateItem(final int id, final String content) {
+        return this.itemService.updateItem(id, content);
+    }
 }

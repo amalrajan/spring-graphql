@@ -33,4 +33,16 @@ public class ItemService {
     public Optional<Item> getItem(final int id) {
         return this.itemRepository.findById(id);
     }
+
+    @Transactional
+    public void deleteItem(final int id) {
+        this.itemRepository.deleteById(id);
+    }
+
+    @Transactional
+    public Item updateItem(final int id, final String content) {
+        Item itemToUpdate = this.itemRepository.getOne(id);
+        itemToUpdate.setContent(content);
+        return this.itemRepository.save(itemToUpdate);
+    }
 }

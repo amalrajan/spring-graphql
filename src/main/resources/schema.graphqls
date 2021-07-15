@@ -10,4 +10,6 @@ type Query {
 
 type Mutation {
     createItem(content: String!): Item
+    deleteItem(id: ID): Boolean
+    updateItem(id: ID, content: String): Item
 }
